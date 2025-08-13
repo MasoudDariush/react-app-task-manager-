@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "1234"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "3cf0",
+      "title": "Masoud Darvishi",
+      "desc": "Update Data",
+      "completed": false
+    },
+    {
+      "id": "430f",
+      "title": "Ali",
+      "desc": "Modify the tasks\n",
+      "completed": false
+    },
+    {
+      "id": "573f",
+      "title": "طسشزشسز",
+      "desc": "شسزشسز",
+      "completed": true
+    },
+    {
+      "id": "c273",
+      "title": "asc",
+      "desc": "asc",
+      "completed": false
+    },
+    {
+      "id": "6503",
+      "title": "sdv",
+      "desc": "dsv",
+      "completed": false
+    },
+    {
+      "id": "137f",
+      "title": "sdv",
+      "desc": "dsv",
+      "completed": false
+    }
+  ]
+}

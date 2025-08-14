@@ -44,7 +44,7 @@ export default function App() {
     })
     .then((res)=> res.json())
     .then((data) => setTasks((prev) => [...prev, data]))
-    toast.success('The task has been updated');
+    toast.success('The list has been updated');
   }
 /////////////////////////////////////////////////////////////////////////////////////////////////
   const handleDelete = (id) => {
@@ -71,7 +71,7 @@ export default function App() {
       setTasks((prev) =>
         prev.map((task) => (task.id === id ? data : task))
       );
-      toast.success('The list has been updated');
+      toast.success('The tasks has been updated');
       setEditTask(null);
     })}
 ///////////////////////////////////////////////////////////////////////////////

@@ -13,12 +13,10 @@ export default function TaskItem({task,onDelete,onEdit,handleUpdateCompleted}) {
 
   return (<>
    <li className="flex flex-col sm:flex-row sm:items-center justify-between bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-  {/* Task Info */}
   <p className="text-gray-800 mb-3 sm:mb-0">
     <strong className="font-semibold">{task.title}</strong> - {task.desc}
   </p>
 
-  {/* Action Buttons */}
   <div className="flex gap-2">
     <button
       className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200

@@ -14,6 +14,7 @@ export default function TaskForm({onAdd,editTask,onUpdate}) {
             setDesc("");
         }
     },[editTask]);
+    
     const handleSubmit = (e)=> {
             e.preventDefault();
 
@@ -48,7 +49,6 @@ export default function TaskForm({onAdd,editTask,onUpdate}) {
   className="bg-white p-6 rounded-lg shadow-md space-y-4" 
   onSubmit={handleSubmit}
 >
-  {/* Title */}
   <input
     type="text"
     placeholder="Title of Task"
@@ -57,7 +57,6 @@ export default function TaskForm({onAdd,editTask,onUpdate}) {
     className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
   />
 
-  {/* Description */}
   <textarea
     placeholder="Description of Task"
     value={desc}
@@ -65,7 +64,6 @@ export default function TaskForm({onAdd,editTask,onUpdate}) {
     className="w-full border border-gray-300 rounded-lg px-4 py-2 min-h-[100px] resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
   />
 
-  {/* Submit Button */}
   <button
     type="submit"
     className={`w-full py-2 rounded-lg font-semibold transition-colors duration-200 

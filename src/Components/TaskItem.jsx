@@ -1,13 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function TaskItem({task,onDelete,onEdit,handleUpdateCompleted}) {
 
-
+        const navigate = useNavigate();
+  
   const updateCompleted = ()=>{
     const updatetask = {...task,
       completed : !task.completed,
   }
   handleUpdateCompleted(task.id,updatetask);
+  
 }
 
 
@@ -31,7 +34,7 @@ export default function TaskItem({task,onDelete,onEdit,handleUpdateCompleted}) {
 
     <button
       className="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors duration-200"
-      onClick={() => onEdit(task)}
+      onClick={() => {onEdit(task), navigate('/add')}}
     >
       Edit
     </button>

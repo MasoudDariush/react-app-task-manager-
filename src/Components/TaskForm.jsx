@@ -1,9 +1,12 @@
 import React,{useState,useEffect} from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function TaskForm({onAdd,editTask,onUpdate}) {
 
     const [title,setTitle] = useState("")
     const [desc,setDesc] = useState("");
+      const navigate = useNavigate();
+
 
     useEffect(()=>{
         if(editTask){
@@ -42,6 +45,7 @@ export default function TaskForm({onAdd,editTask,onUpdate}) {
             }
             setTitle("");
             setDesc("");
+            navigate("/tasks");
             }
 
   return (

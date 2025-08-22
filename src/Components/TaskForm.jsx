@@ -50,9 +50,9 @@ export default function TaskForm({onAdd,editTask,onUpdate}) {
 
   return (
     <form 
-  className="bg-white p-6 rounded-lg shadow-md space-y-4" 
-  onSubmit={handleSubmit}
->
+      className="bg-white p-6 rounded-lg shadow-md space-y-4" 
+        onSubmit={handleSubmit}
+    >
   <input
     type="text"
     placeholder="Title of Task"

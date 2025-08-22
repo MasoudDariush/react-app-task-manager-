@@ -13,7 +13,7 @@ export default function App() {
     const [editTask,setEditTask] = useState(null);
     const [filter, setFilter] = useState('All');
     const [currentPage,setCurrentPage] = useState(1);
-    const [searchTeam, setSearchTeam] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
   
   ///////////////////////////////////////////////////////////////////
     useEffect(()=>{
@@ -28,7 +28,7 @@ export default function App() {
    //////////////////////////////////////////////////////////////////////////
    useEffect(() => {
     setCurrentPage(1);
-  }, [searchTeam, filter]); 
+  }, [searchTerm, filter]); 
   //////////////////////////////////////////////////////////////////////////////////////////
   const handleAddTask = (newTask)=>{
     fetch('http://localhost:3000/tasks', {
@@ -96,7 +96,7 @@ export default function App() {
   });
     ////////////////////////////////////////////////////////////////////////////////////////////
   const searchedTasks = filteredTasks.filter((task) =>
-    task.title.toLowerCase().includes(searchTeam.toLowerCase())
+    task.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
     ///////////////////////////////////////////////////////////////////////////////////////
   const tasksPerPage = 5;
@@ -104,7 +104,7 @@ export default function App() {
   const indexOfFirstTask = indexOfLastTask - tasksPerPage;
   const currentTasks = searchedTasks.slice(indexOfFirstTask, indexOfLastTask);
   const totalPages = Math.max(1, Math.ceil(searchedTasks.length / tasksPerPage));
-
+    ///////////////////////////////////////////////////////////////////////////////////////////
   return (<>
     <Router>
       <Navbar />
@@ -114,7 +114,7 @@ export default function App() {
           <Header />
 
           <Routes>
-            <Route path="/" element={<h2 className="mt-6 text-xl w-fit">Welcome to Task Manager 🚀</h2>}/>
+            <Route path="/" element={<h2 className="mt-60 text-8xl ali text-center">Welcome to Task Manager 🚀</h2>}/>
 
              <Route
               path="/add"
@@ -135,8 +135,8 @@ export default function App() {
                     className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                     type="text"
                     placeholder="Search"
-                    value={searchTeam}
-                    onChange={(e) => setSearchTeam(e.target.value)}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                   />
 
                    <div className="flex gap-3 mt-4">

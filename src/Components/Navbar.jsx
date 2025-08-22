@@ -1,7 +1,7 @@
  import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Navbar() {
+export default function Navbar() {
   return (
     <nav className="bg-orange-500 p-4 flex gap-6">
       <NavLink to="/" className={({ isActive }) => isActive ? "text-white font-bold underline" : "text-white"}>
@@ -16,5 +16,3 @@ function Navbar() {
     </nav>
   );
 }
-
-export default Navbar;
